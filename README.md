@@ -1,3 +1,5 @@
+# react-ts-ds
+react ts电商项目
 ## 积累
 `npm trends`
 
@@ -28,6 +30,7 @@
 ```
 git add .; git commit -m '项目初始化'; // 本地提交
 git remote add origin git@github.com:lumengxin/react-ts-ds.git // 关联远程仓库
+git pull origin main --allow-unrelated-histories; // 拉取远程（有冲突解决，重新add提交）
 ```
 
 
