@@ -21,6 +21,12 @@
     "jsx": "react-jsx", // 五种模式，preserve。react...允许编译器支持编译react代码
 
     "noImplicitAny": false,
+
+    "plugins": [
+      {
+        "name": "typescript-plugin-css-modules"
+      }
+    ]
   },
   "include": [
     "src"

@@ -51,6 +51,20 @@ ts的定义声明
 
 `css in js(jss)`
 
+使用插件
+> npm install typescript-plugin-css-modules --save-dev; (开发依赖，不参与项目打包。包括@types/..也可以)
+
+配置：
+- tsconfig.json:
+```
+"plugins": [
+  {
+    "name": "typescript-plugin-css-modules"
+  }
+]
+```
+- 新建.vscode/settings.json(处理tsconfig, 配置后弹框选择允许)。对css会有提示。
+
 
 ## 问题
 
