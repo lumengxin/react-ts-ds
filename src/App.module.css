@@ -1,6 +1,8 @@
 .app {
   color: blue;
-  .title {
-    color: pink;
-  }
+}
+
+.title {
+  font-family: 'zkkht';
+  font-size: 24px;
 }

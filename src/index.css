@@ -11,3 +11,8 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face {
+  font-family: 'zkkht';
+  src: local('zkkht') url('./assets/fonts/站酷酷黑体.ttf') format('truetype');
+}
