@@ -9,7 +9,7 @@ interface RobotProps {
 
 const Robot: React.FC<RobotProps> = ({id,name,email}) => {
   return (
-    <div className={styles.cardContainer}>
+    <div className={styles.robotContainer}>
       <h1>{id}</h1>
       <p>{name}</p>
       <p>{email}</p>
