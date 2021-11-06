@@ -33,6 +33,24 @@ git remote add origin git@github.com:lumengxin/react-ts-ds.git // 关联远程�
 git pull origin main --allow-unrelated-histories; // 拉取远程（有冲突解决，重新add提交）
 ```
 
+## 项目
+
+### 样式文件
+
+css module(模组化)
+- 每个jsx或者tsx文件就被视为一个独立存在的原件
+- 原件所包含的所有内容也同样应该都是独立存在的
+- import './index.css' -> import style from './index.css'
+
+命名规范：*.module.css
+
+ts的定义声明
+- *.d.ts(名字任意，自动识别)
+- 只包含类型声明，不包含逻辑
+- 不会被编译、也不会别webpack打包
+
+`css in js(jss)`
+
 
 ## 问题
 

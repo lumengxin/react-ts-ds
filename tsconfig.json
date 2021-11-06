@@ -18,7 +18,7 @@
     "resolveJsonModule": true,  // 
     "isolatedModules": true,  // 编译器会将每个文件作为单独的模块使用
     "noEmit": true, // 发生错误时，编译器不要生成js代码
-    "jsx": "react-jsx", // 允许编译器支持编译react代码
+    "jsx": "react-jsx", // 五种模式，preserve。react...允许编译器支持编译react代码
 
     "noImplicitAny": false,
   },
