@@ -26,4 +26,26 @@
 新建一个github仓库，react-ts-ds
 
 ```
-git add remote origin git@github.com:lumengxin/react-ts-ds.git // 关联远程仓库
+git add .; git commit -m '项目初始化'; // 本地提交
+git remote add origin git@github.com:lumengxin/react-ts-ds.git // 关联远程仓库
+```
+
+
+## 问题
+
+1. ssh: connect to host github.com port 22: Connection timed out...
+
+以为ssh过期，重新添加
+cd ~/.ssh;
+cat id_rsa.pub;
+...无效
+
+解决：
+- 测试可用性 > ssh -T -p 443 git@ssh.github.com;
+- 编辑~/.ssh/config 文件文件，添加：
+```
+Host github.com
+Hostname ssh.github.com
+Port 443
+```
+
