@@ -100,6 +100,15 @@ setState() 本身并非异步，处理机制给人一种异步的假象。state�
 - Updating: 更新虚拟DOM, 重新渲染UI
 - Unmounting: 删除虚拟DOM, 移除UI
 
+### hooks
+
+- 消息处理的一种方式，用来监视指定程序
+- 函数组件中需要处理副作用，可以用钩子把外部代码‘勾’进来
+- 常用钩子：useState, useEffect, useContext, useReducer
+- 使用use前缀名
+
+
+
 ### React17x
 
 - 事件委托机制改变
