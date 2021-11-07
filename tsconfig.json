@@ -20,7 +20,7 @@
     "noEmit": true, // 发生错误时，编译器不要生成js代码
     "jsx": "react-jsx", // 五种模式，preserve。react...允许编译器支持编译react代码
 
-    "noImplicitAny": false,
+    "noImplicitAny": false, // 开启any映射(any类型不需要显式写出来)
 
     "plugins": [
       {

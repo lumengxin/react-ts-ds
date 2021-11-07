@@ -69,9 +69,17 @@ ts的定义声明
 
 脚手架初始化已经处理了。
 
-#### 图片
+### state和props
 
+- props是组件对外的接口，state是组件对内的接口
+- props用于组件间的数据传递，state用于组件内部数据传递
+- state是私有的，通过setState()修改。constructor是唯一可以初始化state的地方
+- state是异步的，不要依赖当前的state计算下个state
+- props是只读属性的，函数式编程
 
+### react event
+
+可以通过e.nativeEvent访问原生html事件。
 
 
 ## 问题
