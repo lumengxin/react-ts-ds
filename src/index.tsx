@@ -2,8 +2,8 @@ import React from "react"
 import ReactDOM from "react-dom"
 import "./index.css" // 全局样式
 import reportWebVitals from "./reportWebVitals"
-import App from "./App"
-import { AppStateProvider } from './AppState'
+import App from "./App";
+import { AppStateProvider } from './AppState';
 
 
 ReactDOM.render(
