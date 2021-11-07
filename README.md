@@ -81,6 +81,14 @@ ts的定义声明
 
 可以通过e.nativeEvent访问原生html事件。
 
+### 异步，动态显示
+
+- ajax
+- callback回调函数
+- 程序栈stack,先进先出
+- promise
+
+
 
 ## 问题
 
