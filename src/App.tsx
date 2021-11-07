@@ -12,20 +12,34 @@ interface State {
 }
 
 export default class App extends Component<Props, State> {
+  // *生命周期1: 初始化
+  // 初始化组件 state
   constructor(props) {
     super(props)
+    this.state = {
+      robotGallery: [],
+      count: 0,
+    }
   }
 
-  state = {
-    robotGallery: [],
-    count: 0,
-  }
-
+  
+  // *组件创建好dom元素以后，挂载进页面时调用
   componentDidMount() {
     fetch("https://jsonplaceholder.typicode.com/users")
       .then((res) => res.json())
       .then((data) => this.setState({ robotGallery: data }))
   }
+
+  // *生命周期2： 更新
+  // componentWillReceiveProps // 在组件接收到一个新的props（更新后）时被调用。废弃
+  // static getDdrivingStateFromProps(nextProps, prevState)
+  // shouldComponentUpdate(nextProps, nextState) {
+  //   return nextState.some !== this.state.some // 重新渲染ui开销大，判断需要返回true时执行
+  // }
+  componentDidUpdate(){}
+
+  // *生命周期3： 销毁
+  componentWillUnmount() {}
 
   render() {
     return (

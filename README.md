@@ -94,7 +94,20 @@ ts的定义声明
 
 setState() 本身并非异步，处理机制给人一种异步的假象。state处理一般发生在生命周期变化的时候。
 
+### 生命周期
 
+- Mounting: 创建虚拟DOM, 渲染UI
+- Updating: 更新虚拟DOM, 重新渲染UI
+- Unmounting: 删除虚拟DOM, 移除UI
+
+### React17x
+
+- 事件委托机制改变
+- 向原生浏览器靠拢
+- 删除事件池
+- useEffect清理操作改为异步操作
+- jsx不可以返回undefinded
+- 删除部分私有api
 
 
 ## 问题
