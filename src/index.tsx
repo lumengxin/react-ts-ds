@@ -5,7 +5,7 @@ import reportWebVitals from "./reportWebVitals"
 import App from "./App"
 
 const defaultValue = {
-  username: "xin",
+  username: "li",
 }
 
 export const AppContext = React.createContext(defaultValue)
