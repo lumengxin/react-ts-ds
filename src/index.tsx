@@ -3,18 +3,14 @@ import ReactDOM from "react-dom"
 import "./index.css" // 全局样式
 import reportWebVitals from "./reportWebVitals"
 import App from "./App"
+import { AppStateProvider } from './AppState'
 
-const defaultValue = {
-  username: "li",
-}
-
-export const AppContext = React.createContext(defaultValue)
 
 ReactDOM.render(
   <React.StrictMode>
-    <AppContext.Provider value={defaultValue}>
+    <AppStateProvider>
       <App />
-    </AppContext.Provider>
+    </AppStateProvider>
   </React.StrictMode>,
   document.getElementById("root")
 )
