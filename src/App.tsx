@@ -6,7 +6,7 @@ import {
 	Carousel,
 	SideMenu,
 	ProductCollection,
-	BusinessPartners,
+	BusinessPartners
 } from './components'
 import { Row, Col, Typography } from 'antd'
 import { productList1, productList2, productList3 } from './mockups'

@@ -11,7 +11,7 @@ const companies = [
 	{ src: image1, title: 'Microsoft' },
 	{ src: image2, title: 'Youtube' },
 	{ src: image3, title: 'Ins' },
-	{ src: image4, title: 'Facebook' },
+	{ src: image4, title: 'Facebook' }
 ]
 
 export const BusinessPartners: React.FC = (props) => {
@@ -30,7 +30,7 @@ export const BusinessPartners: React.FC = (props) => {
 								width: '80%',
 								display: 'block',
 								marginLeft: 'auto',
-								marginRight: 'auto',
+								marginRight: 'auto'
 							}}
 						/>
 					</Col>
