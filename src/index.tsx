@@ -1,16 +1,13 @@
 import React from "react"
 import ReactDOM from "react-dom"
-import "./index.css" // 全局样式
+import "./index.css"
 import reportWebVitals from "./reportWebVitals"
 import App from "./App";
-import { AppStateProvider } from './AppState';
 
 
 ReactDOM.render(
   <React.StrictMode>
-    <AppStateProvider>
       <App />
-    </AppStateProvider>
   </React.StrictMode>,
   document.getElementById("root")
 )
