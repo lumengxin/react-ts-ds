@@ -46,8 +46,8 @@ module.exports = {
     'max-len': [2, { code: 100 }],
     // jsx缩进2个空格
     // 'react/jsx-indent': [2, 2],
-    // 文件末尾强制换行
-    'eol-last': 2,
+    // 文件末尾不换行
+    'eol-last': 0,
     // eslint默认不认可tab
     'no-tabs': 0,
 

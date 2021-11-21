@@ -18,7 +18,7 @@ module.exports = {
   // 箭头函数参数只有一个时括号 默认avoid 可选 avoid| always
   arrowParens: 'always',
   // 使用默认的折行标准
-  proseWrap: 'preserve',
+  proseWrap: 'never',
   // 根据显示样式决定 html 要不要折行
   htmlWhitespaceSensitivity: 'css',
   // 换行符使用 crlf/lf/auto
