@@ -36,8 +36,8 @@ module.exports = {
     semi: [2, 'never'],
     // 出现未使用的变量
     '@typescript-eslint/no-unused-vars': [0],
-    // 箭头函数参数括号，一个参数时可省略括号
-    'arrow-parens': [2, 'as-needed'],
+    // 箭头函数参数括号
+    'arrow-parens': [2, 'always'],
     // 箭头函数，箭头前后空格
     'arrow-spacing': [2, { before: true, after: true }],
     // 对象最后一项逗号
@@ -50,6 +50,7 @@ module.exports = {
     'eol-last': 0,
     // eslint默认不认可tab
     'no-tabs': 0,
+    '@typescript-eslint/no-empty-interface': 0,
 
     // react配置
     // 强制组件方法顺序
@@ -61,7 +62,8 @@ module.exports = {
     // 检查 effect 的依赖
     'react-hooks/exhaustive-deps': [2],
     // jsx-index
-    indent: ['error', 2, { ignoredNodes: ['JSXElement'] }],
-    'react/jsx-indent': ['error', 2]
+    // indent: ['error', 2, { ignoredNodes: ['JSXElement'] }],
+    // 'react/jsx-indent': ['error', 2],
+    'react/self-closing-comp': 0
   }
 }

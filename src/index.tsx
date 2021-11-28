@@ -4,6 +4,8 @@ import './index.css'
 import reportWebVitals from './reportWebVitals'
 import App from './App'
 import 'antd/dist/antd.css'
+// 自动注入
+import './i18n/configs'
 
 ReactDOM.render(
   <React.StrictMode>
