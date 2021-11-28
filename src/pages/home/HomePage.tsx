@@ -8,41 +8,79 @@ import {
 	BusinessPartners
 } from '../../components'
 import { Row, Col, Typography, Spin } from 'antd'
-import { productList1, productList2, productList3 } from './mockups'
+// import { productList1, productList2, productList3 } from './mockups'
 import sideImage from '../../assets/images/sider_2019_12-09.png'
 import sideImage2 from '../../assets/images/sider_2019_02-04.png'
 import sideImage3 from '../../assets/images/sider_2019_02-04-2.png'
 import styles from './HomePage.module.css'
 import axios from 'axios'
+import { withTranslation, WithTranslation } from 'react-i18next'
+import { connect } from 'react-redux'
+import { RootState } from '../../redux/store'
+import {
+	fetchRecommendProductFailActionCreator,
+	fetchRecommendProductStartActionCreator,
+	fetchRecommendProductSuccessActionCreator
+} from '../../redux/recommendProducts/recommendProductsActions'
 
-export class HomePage extends React.Component {
-	constructor(props) {
-		super(props)
+const mapStateToProps = (state: RootState) => {
+	return {
+		loading: state.recommendProducts.loading,
+		error: state.recommendProducts.error,
+		products: state.recommendProducts.products
 	}
-	state = {
-		products: [],
-		loading: true,
-		error: null
+}
+
+const mapDispatchToProps = (dispatch) => {
+	return {
+		fetchStart: () => {
+			dispatch(fetchRecommendProductStartActionCreator())
+		},
+		fetchSuccess: (data) => {
+			dispatch(fetchRecommendProductSuccessActionCreator(data))
+		},
+		fetchFail: (error) => {
+			dispatch(fetchRecommendProductFailActionCreator(error))
+		}
 	}
+}
+
+type PropsType = WithTranslation &
+	ReturnType<typeof mapStateToProps> &
+	ReturnType<typeof mapDispatchToProps>
+
+class OriginHomePage extends React.Component<PropsType> {
+	// constructor(props) {
+	// 	super(props)
+	// }
+	// state = {
+	// 	products: [],
+	// 	loading: true,
+	// 	error: null
+	// }
 
 	async componentDidMount() {
+		this.props.fetchStart()
 		try {
 			const { data } = await axios.get('/data.json')
-			this.setState({
-				loading: false,
-				error: null,
-				products: data.products
-			})
+			// this.setState({
+			// 	loading: false,
+			// 	error: null,
+			// 	products: data.products
+			// })
+			this.props.fetchSuccess(data.products)
 		} catch (error) {
-			this.setState({
-				error: error,
-				loading: false
-			})
+			// this.setState({
+			// 	error: error,
+			// 	loading: false
+			// })
+			this.props.fetchFail(error)
 		}
 	}
 
 	render() {
-		const { products, error, loading } = this.state
+		// const { products, error, loading } = this.state
+		const { products, error, loading, t } = this.props
 		if (loading) {
 			return (
 				<Spin
@@ -110,3 +148,8 @@ export class HomePage extends React.Component {
 		)
 	}
 }
+
+export const HomePage = connect(
+	mapStateToProps,
+	mapDispatchToProps
+)(withTranslation()(OriginHomePage))

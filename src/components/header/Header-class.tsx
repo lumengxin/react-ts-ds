@@ -14,8 +14,8 @@ class OriginHeader extends Component<RouteComponentProps, State> {
 		super(props)
 		const storeState = store.getState()
 		this.state = {
-			language: storeState.language,
-			languageList: storeState.languageList
+			language: storeState.language.language,
+			languageList: storeState.language.languageList
 		}
 		// 订阅sotre，实现数据推送
 		store.subscribe(this.handleStoreChange)
@@ -23,9 +23,8 @@ class OriginHeader extends Component<RouteComponentProps, State> {
 
 	handleStoreChange = () => {
 		const sotreState = store.getState()
-		debugger
 		this.setState({
-			language: sotreState.language
+			language: sotreState.language.language
 		})
 	}
 
