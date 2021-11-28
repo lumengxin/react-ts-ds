@@ -17,3 +17,10 @@ const store = createStore(rootReducer, applyMiddleware(thunk, actionLog))
 export type RootState = ReturnType<typeof store.getState>
 
 export default store
+
+/** 减少模板代码方案
+ * 1.Flux,多数据仓库，多store
+ * 2.Redux配合Rxjs
+ * 3.mobx替换redux
+ * 4.redux-toolkit **
+ */

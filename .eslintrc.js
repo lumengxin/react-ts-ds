@@ -43,7 +43,7 @@ module.exports = {
 		// 对象最后一项逗号
 		'comma-dangle': [2, 'never'],
 		// 单行代码/字符串最大长度
-		'max-len': [2, { code: 100 }],
+		// 'max-len': [2, { code: 150 }],
 		indent: 0,
 		// jsx缩进2个空格
 		// 'react/jsx-indent': [2, 2],

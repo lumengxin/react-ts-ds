@@ -1,32 +1,32 @@
 {
-  "compilerOptions": {
-    "target": "es5", // 编译后的目标js版本 ES5 ES6/ES2015, ES2016...
-    "lib": [
-      "dom", // document.getElementById('root')
-      "dom.iterable",
-      "esnext"
-    ],
-    "allowJs": true, // 允许混合编译js文件
-    "skipLibCheck": true,
-    "esModuleInterop": true, // 允许使用commonjs的方式import默认文件（import React from 'react'） import * as React from "react"
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "noFallthroughCasesInSwitch": true,
-    "module": "esnext", // 配置模块系统 Node的commonjs，es6的esnext，requirejs的AMDS
-    "moduleResolution": "node", // 编译器工作方式
-    "resolveJsonModule": true, //
-    "isolatedModules": true, // 编译器会将每个文件作为单独的模块使用
-    "noEmit": true, // 发生错误时，编译器不要生成js代码
-    "jsx": "react-jsx", // 五种模式，preserve。react...允许编译器支持编译react代码
+	"compilerOptions": {
+		"target": "es5", // 编译后的目标js版本 ES5 ES6/ES2015, ES2016...
+		"lib": [
+			"dom", // document.getElementById('root')
+			"dom.iterable",
+			"esnext"
+		],
+		"allowJs": true, // 允许混合编译js文件
+		"skipLibCheck": true,
+		"esModuleInterop": true, // 允许使用commonjs的方式import默认文件（import React from 'react'） import * as React from "react"
+		"allowSyntheticDefaultImports": true,
+		"strict": true,
+		"forceConsistentCasingInFileNames": true,
+		"noFallthroughCasesInSwitch": true,
+		"module": "esnext", // 配置模块系统 Node的commonjs，es6的esnext，requirejs的AMDS
+		"moduleResolution": "node", // 编译器工作方式
+		"resolveJsonModule": true, //
+		"isolatedModules": true, // 编译器会将每个文件作为单独的模块使用
+		"noEmit": true, // 发生错误时，编译器不要生成js代码
+		"jsx": "react-jsx", // 五种模式，preserve。react...允许编译器支持编译react代码
 
-    "noImplicitAny": false, // 开启any映射(any类型不需要显式写出来)
+		"noImplicitAny": false, // 开启any映射(any类型不需要显式写出来)
 
-    "plugins": [
-      {
-        "name": "typescript-plugin-css-modules"
-      }
-    ]
-  },
-  "include": ["src"]
+		"plugins": [
+			{
+				"name": "typescript-plugin-css-modules"
+			}
+		]
+	},
+	"include": ["src"]
 }
