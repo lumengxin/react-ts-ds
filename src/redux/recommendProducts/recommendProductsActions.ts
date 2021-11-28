@@ -48,6 +48,7 @@ export const fetchRecommendProductFailActionCreator = (error): FetchRecommendPro
 }
 
 // thunk可以返回一个函数，不一定是js对象；可以完成一系列连续的acticon
+// RESTfull: https://developer.github.com/v3/ https://developers.douban.com/wiki/?title=api_v2
 export const reqAsyncDataActionCreator =
 	(): ThunkAction<void, RootState, unknown, RecommendProductAction> =>
 	async (dispatch, getState) => {
