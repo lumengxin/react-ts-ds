@@ -52,6 +52,7 @@ module.exports = {
 		// eslint默认不认可tab
 		'no-tabs': 0,
 		'@typescript-eslint/no-empty-interface': 0,
+		'@typescript-eslint/ban-ts-comment': 0,
 
 		// react配置
 		// 强制组件方法顺序
