@@ -3,7 +3,7 @@ import languageReducer from './language/languageReducer'
 import recommendProductsReducer from './recommendProducts/recommendProductsReducer'
 import thunk from 'redux-thunk'
 import { actionLog } from './middleware/actionLog'
-import { combineReducers } from '@reduxjs/toolkit'
+import { combineReducers, configureStore } from '@reduxjs/toolkit'
 import { productDetailSlice } from './productDetail/slice'
 
 const rootReducer = combineReducers({
@@ -14,7 +14,13 @@ const rootReducer = combineReducers({
 
 // 中间件：函数式编程、复合函数、柯力化    // 马丁·福勒, 罗伊
 // const middleware = (store) => (next) => (action) => {}
-const store = createStore(rootReducer, applyMiddleware(thunk, actionLog))
+// const store = createStore(rootReducer, applyMiddleware(thunk, actionLog))
+
+const store = configureStore({
+	reducer: rootReducer,
+	middleware: (getDefaultMiddleware) => [...getDefaultMiddleware(), actionLog],
+	devTools: true
+})
 
 // 类型注入，ReturnType泛型中获取
 export type RootState = ReturnType<typeof store.getState>

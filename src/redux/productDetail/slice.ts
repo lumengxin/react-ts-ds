@@ -1,4 +1,5 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit'
+import { createSlice, PayloadAction, createAsyncThunk } from '@reduxjs/toolkit'
+import axios from 'axios'
 
 interface ProductDetailState {
 	loading: boolean
@@ -31,3 +32,16 @@ export const productDetailSlice = createSlice({
 		}
 	}
 })
+
+export const getAsyncProductDetail = createAsyncThunk(
+	'productDetail/getAsyncProductDetail',
+	async (id: string, thunkApi) => {
+		thunkApi.dispatch(productDetailSlice.actions.fetchStart())
+		try {
+			const { data } = await axios.get('/detail.json')
+			thunkApi.dispatch(productDetailSlice.actions.fetchSuccess(data))
+		} catch (error: any) {
+			thunkApi.dispatch(productDetailSlice.actions.fetchFail(error))
+		}
+	}
+)
