@@ -1,12 +1,15 @@
-import { createStore, combineReducers, applyMiddleware } from 'redux'
+import { createStore, applyMiddleware } from 'redux'
 import languageReducer from './language/languageReducer'
 import recommendProductsReducer from './recommendProducts/recommendProductsReducer'
 import thunk from 'redux-thunk'
 import { actionLog } from './middleware/actionLog'
+import { combineReducers } from '@reduxjs/toolkit'
+import { productDetailSlice } from './productDetail/slice'
 
 const rootReducer = combineReducers({
 	language: languageReducer,
-	recommendProducts: recommendProductsReducer
+	recommendProducts: recommendProductsReducer,
+	productDetail: productDetailSlice.reducer
 })
 
 // 中间件：函数式编程、复合函数、柯力化    // 马丁·福勒, 罗伊
