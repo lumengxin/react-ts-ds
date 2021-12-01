@@ -13,6 +13,7 @@ import {
 	changeLanguageActionCreator
 } from '../../redux/language/languageActions'
 import { useTranslation } from 'react-i18next'
+import { useHistory } from 'react-router-dom'
 
 export const Header: React.FC = () => {
 	// const language = useSelector((state: RootState) => state.language)
@@ -22,6 +23,7 @@ export const Header: React.FC = () => {
 	// const dispatch = useDispatch<Dispatch<LanguageActionTypes>>()
 	const dispatch = useDispatch()
 	const { t } = useTranslation()
+	const history = useHistory()
 
 	const handleChangeLanguage = (m) => {
 		console.log('🚀 ~ file: Header.tsx ~ line 24 ~ handleChangeLanguage ~ m', m)
@@ -67,6 +69,7 @@ export const Header: React.FC = () => {
 				<Input.Search
 					placeholder={'请输入旅游目的地、主题、或关键字'}
 					className={styles['search-input']}
+					onSearch={(keywords) => history.push('/search/' + keywords)}
 				/>
 			</Layout.Header>
 			<Menu mode={'horizontal'} className={styles['main-menu']}>

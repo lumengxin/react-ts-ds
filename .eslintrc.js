@@ -66,6 +66,7 @@ module.exports = {
 		// jsx-index
 		// indent: ['error', 2, { ignoredNodes: ['JSXElement'] }],
 		'react/jsx-indent': 0,
-		'react/self-closing-comp': 0
+		'react/self-closing-comp': 0,
+		'react-hooks/exhaustive-deps': 0
 	}
 }

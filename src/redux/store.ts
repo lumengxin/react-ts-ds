@@ -5,11 +5,13 @@ import thunk from 'redux-thunk'
 import { actionLog } from './middleware/actionLog'
 import { combineReducers, configureStore } from '@reduxjs/toolkit'
 import { productDetailSlice } from './productDetail/slice'
+import { productSearchSlice } from './productSearch/slice'
 
 const rootReducer = combineReducers({
 	language: languageReducer,
 	recommendProducts: recommendProductsReducer,
-	productDetail: productDetailSlice.reducer
+	productDetail: productDetailSlice.reducer,
+	productSearch: productSearchSlice.reducer
 })
 
 // 中间件：函数式编程、复合函数、柯力化    // 马丁·福勒, 罗伊
