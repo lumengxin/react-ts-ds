@@ -2,5 +2,6 @@
 	"typescript.tsdk": "node_modules/typescript/lib",
 	"typescript.enablePromptUseWorkspaceTsdk": true,
 	"editor.formatOnSave": true,
-	"editor.formatOnType": true
+	"editor.formatOnType": true,
+	"i18n-ally.localesPaths": ["src/i18n", "src/redux/language"]
 }
