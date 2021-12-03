@@ -7,16 +7,19 @@ import 'antd/dist/antd.css'
 // 自动注入
 import './i18n/configs'
 import { Provider } from 'react-redux'
-import store from './redux/store'
+import rootStore from './redux/store'
 import axios from 'axios'
+import { PersistGate } from 'redux-persist/integration/react'
 
 // 身份验证
 axios.defaults.headers['x-icode'] = 'FB80558A73FA658E'
 
 ReactDOM.render(
 	<React.StrictMode>
-		<Provider store={store}>
-			<App />
+		<Provider store={rootStore.store}>
+			<PersistGate persistor={rootStore.persistor}>
+				<App />
+			</PersistGate>
 		</Provider>
 	</React.StrictMode>,
 	document.getElementById('root')
