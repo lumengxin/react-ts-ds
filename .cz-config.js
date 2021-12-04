@@ -2,14 +2,14 @@
 module.exports = {
 	// 修改性质
 	types: [
-		{ value: 'feat', name: ' 🍓 feat: 新功能' },
-		{ value: 'fix', name: ' 🐛 fix: 修复bug' },
-		{ value: 'style', name: ' 👨🏻‍💻 style: 代码格式（空格、分号等）' },
-		{ value: 'docs', name: ' 📦 docs: 文档修改' },
-		{ value: 'refactor', name: ' 🏗 refactor: 重构（非feat、非fix）' },
-		{ value: 'perf', name: ' 🧪 perf: 提高性能' },
-		{ value: 'ci', name: ' 👀 ci: 持续集成的配置文件或脚本的修改' },
-		{ value: 'build', name: ' 🏓 build: 构建工具或外部依赖包的修改' },
+		{ value: ':art: feat', name: ' 🎨 feat: 新功能' },
+		{ value: ':bug: fix', name: ' 🐛 fix: 修复bug' },
+		{ value: ':lipstick: style', name: ' 💄 style: 代码格式（空格、分号等）' },
+		{ value: ':memo: docs', name: ' 📝 docs: 文档修改' },
+		{ value: ':recycle: refactor', name: ' ♻️ refactor: 重构（非feat、非fix）' },
+		{ value: ':zap: perf', name: ' ⚡️ perf: 提高性能' },
+		{ value: ':green_heart: ci', name: ' 💚 ci: 持续集成的配置文件或脚本的修改' },
+		{ value: ':construction_worker: build', name: ' 👷 build: 构建工具或外部依赖包的修改' },
 		{ value: 'WIP', name: ' 👨🏻‍🚀 WIP: 进行中的工作' },
 		{ value: 'revert', name: ' 🌚 revert: 撤销某次提交' },
 		{ value: 'test', name: ' 🦄 test: 添加缺少的测试' },
