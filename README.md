@@ -103,4 +103,6 @@ module.exports = {
 
 4. 通过 git hook 在 commit-msg 阶段进行 commit message lint。
 
+> npx husky add .husky/commit-msg 'npx --no-install commitlint --edit $1'
+
 #### 版本管理及日志规范
