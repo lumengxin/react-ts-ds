@@ -97,7 +97,11 @@
 module.exports = {
   extends: [
     'cz'
-  ]
+  ],
+  // 需要和.cz-config.js中规则保持一致
+  rules: {
+    // ...
+  }
 }
 ```
 
@@ -106,3 +110,18 @@ module.exports = {
 > npx husky add .husky/commit-msg 'npx --no-install commitlint --edit $1'
 
 #### 版本管理及日志规范
+
+自动生成 CHANGELOG，语义化我们的版本（Semantic Versioning）。
+
+> yarn add standard-version -D
+
+配置 package.json
+
+```
+{
+  "script": {
+    // .....
+    "release": "standard-version"
+  }
+}
+```

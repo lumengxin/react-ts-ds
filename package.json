@@ -39,7 +39,8 @@
 		"lint-fix": "npm run lint-fix:script",
 		"lint:script": "eslint . --ext .js,.jsx,.ts,.tsx",
 		"lint-fix:script": "npm run lint:script -- --fix",
-		"commit": "git-cz"
+		"commit": "git-cz",
+		"release": "standard-version"
 	},
 	"eslintConfig": {
 		"extends": [
@@ -73,6 +74,7 @@
 		"husky": "^7.0.4",
 		"lint-staged": "^12.0.3",
 		"prettier": "^2.4.1",
+		"standard-version": "^9.3.2",
 		"typescript-plugin-css-modules": "^3.4.0"
 	},
 	"config": {

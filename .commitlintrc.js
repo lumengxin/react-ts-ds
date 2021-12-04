@@ -33,16 +33,16 @@ module.exports = {
 		'scope-case': [2, 'always', 'lower-case'],
 		'scope-enum': [0], // level: disabled
 		// 'function-rules/scope-enum': [
-		//   2, // level: error
-		//   'always',
-		//   (parsed) => {
-		//     const allowedScopes = ['@foo/bar'];
-		//     if (!parsed.scope || allowedScopes.includes(parsed.scope)) {
-		//       return [true];
-		//     }
+		// 	2, // level: error
+		// 	'always',
+		// 	(parsed) => {
+		// 		const allowedScopes = ['business', 'components', 'config', 'styles', 'utils', 'docs']
+		// 		if (!parsed.scope || allowedScopes.includes(parsed.scope)) {
+		// 			return [true]
+		// 		}
 
-		//     return [false, `scope must be one of ${allowedScopes.join(', ')}`];
-		//   },
+		// 		return [false, `scope must be one of ${allowedScopes.join(', ')}`]
+		// 	}
 		// ],
 		// <subject> 不能为空
 		'subject-empty': [2, 'never'],
