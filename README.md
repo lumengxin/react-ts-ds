@@ -43,3 +43,46 @@
 - 开源的 OpenAM, OpenIDM, OpenDJ
 
 ![sso](./src/docs/sso.png)
+
+## 规范化
+
+#### 编辑器规范
+
+#### 代码格式规范
+
+#### js 及 react 代码语法规范
+
+#### commit 提交规范
+
+1. commitizen/cz-cli： 替代你的 git commit（帮助我们生成符合规范的 commit message）
+
+- 全局安装：npm install commitizen -g // git cz | git-cz 代替 git commit
+- 项目中安装：
+
+  > npm i commitizen -D;
+
+  package.json 中配置 scipt 命令："commit": "git-cz"。npm run commit 代替 git commit
+
+- 无需安装：npx cz; (npm 5.2+)
+
+2. cz-customizable：自定义 adapter, 可自定义的 Commitizen 插件。比如：默认的提交 types 可能特别多，有些时候我们可能只需要其中的某些 type，或者自定义 type。（或者使用 cz-conventional-changelog。一个 commitizen 的 adapter（适配器），一个符合 Angular 团队规范的 preset。按照我们指定的规范帮助我们生成 commit message。）
+
+> yarn add cz-customizable -D
+
+配置 package.json:
+
+```
+{
+    "config": {
+        "commitizen": {
+          "path": "node_modules/cz-customizable"
+        }
+    }
+}
+```
+
+根目录，配置.cz-config.js
+
+3. commit 校验
+
+#### 版本管理及日志规范
