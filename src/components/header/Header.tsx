@@ -94,7 +94,7 @@ export const Header: React.FC = () => {
 			</div>
 			<Layout.Header className={styles['main-header']}>
 				<img src={logo} alt="logo" className={styles['App-logo']} />
-				<Typography.Title level={3} className={styles.title}>
+				<Typography.Title level={3} className={styles.title} onClick={() => history.push('/')}>
 					{t('header.title')}
 				</Typography.Title>
 				<Input.Search
