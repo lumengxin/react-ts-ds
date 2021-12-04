@@ -46,6 +46,8 @@
 
 ## 规范化
 
+[如何配置 Git Commit Message](https://zhuanlan.zhihu.com/p/69635847)
+
 #### 编辑器规范
 
 #### 代码格式规范
@@ -84,5 +86,21 @@
 根目录，配置.cz-config.js
 
 3. commit 校验
+
+如果是使用 cz-customizable 适配器做了破坏 Angular 风格的提交说明配置，那么不能使用@commitlint/config-conventional 规则进行提交说明校验，可以使用 commitlint-config-cz 对定制化提交说明进行校验。
+
+> yarn add -D commitlint-config-cz @commitlint/cli
+
+配置`.commitlintrc.js` 文件：
+
+```
+module.exports = {
+  extends: [
+    'cz'
+  ]
+}
+```
+
+4. 通过 git hook 在 commit-msg 阶段进行 commit message lint。
 
 #### 版本管理及日志规范
