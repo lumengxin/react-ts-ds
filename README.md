@@ -46,7 +46,11 @@
 
 ## 规范化
 
-[对现有 React 项目进行规范及优化]https://juejin.cn/post/6987685788410445855) [如何配置 Git Commit Message](https://zhuanlan.zhihu.com/p/69635847)
+[对现有 React 项目进行规范及优化](https://juejin.cn/post/6987685788410445855)
+
+[如何配置 Git Commit Message](https://zhuanlan.zhihu.com/p/69635847)
+
+[commit 规范+commitlint+CHANGELOG 自动生成一条龙服务](https://juejin.cn/post/6934292467160514567)
 
 #### 编辑器规范
 
@@ -125,3 +129,7 @@ module.exports = {
   }
 }
 ```
+
+#### 其他
+
+- emji: https://gitmoji.dev/
