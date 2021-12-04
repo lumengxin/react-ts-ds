@@ -41,7 +41,7 @@
 		"lint:script": "eslint . --ext .js,.jsx,.ts,.tsx",
 		"lint-fix:script": "npm run lint:script -- --fix",
 		"commit": "git-cz",
-		"release": "standard-version",
+		"release": "standard-version --preset gitmoji-config",
 		"release:test": "npm run release -- --prerelease alpha"
 	},
 	"eslintConfig": {
@@ -69,6 +69,7 @@
 		"commitizen": "^4.2.4",
 		"commitlint-config-cz": "^0.13.2",
 		"commitlint-config-gitmoji": "^2.2.5",
+		"conventional-changelog-gitmoji-config": "^1.4.3",
 		"cz-customizable": "^6.3.0",
 		"eslint": "^7.11.0",
 		"eslint-config-prettier": "^8.3.0",

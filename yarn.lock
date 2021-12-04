@@ -4207,6 +4207,15 @@ conventional-changelog-express@^2.0.6:
   dependencies:
     q "^1.5.1"
 
+conventional-changelog-gitmoji-config@^1.4.3:
+  version "1.4.3"
+  resolved "https://mirrors.huaweicloud.com/repository/npm/conventional-changelog-gitmoji-config/-/conventional-changelog-gitmoji-config-1.4.3.tgz#a4516ea4400e512ddd1e573b8234f69a9ed21a6d"
+  integrity sha512-8HqbhNFuya85ICZvXv1ck2a2B7KlSVPGEFtK+Jar/qCUuq+E0PiINBJbpYcHOfsEucDRW4W4AUMQH7ap6+0DdQ==
+  dependencies:
+    "@gitmoji/commit-types" "1.1.5"
+    "@gitmoji/parser-opts" "1.3.0"
+    cosmiconfig "^7.0.0"
+
 conventional-changelog-jquery@^3.0.11:
   version "3.0.11"
   resolved "https://mirrors.huaweicloud.com/repository/npm/conventional-changelog-jquery/-/conventional-changelog-jquery-3.0.11.tgz#d142207400f51c9e5bb588596598e24bba8994bf"
