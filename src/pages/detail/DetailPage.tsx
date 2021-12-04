@@ -1,5 +1,5 @@
 // @ts-nocheck
-import React, { useState, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import { RouteComponentProps, useParams } from 'react-router-dom'
 import { Spin, Row, Col, Divider, Typography, Anchor, Menu, Button } from 'antd'
 import styles from './DetailPage.module.css'
