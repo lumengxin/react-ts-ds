@@ -1,11 +1,10 @@
 // @ts-nocheck
 import React, { useState, useEffect } from 'react'
 import { RouteComponentProps, useParams } from 'react-router-dom'
-import axios from 'axios'
 import { Spin, Row, Col, Divider, Typography, Anchor, Menu, Button } from 'antd'
 import styles from './DetailPage.module.css'
 import { Header, Footer, ProductIntro, ProductComments } from '../../components'
-import { DatePicker, Space } from 'antd'
+import { DatePicker } from 'antd'
 import { commentMockData } from './mockup'
 import { productDetailSlice, getAsyncProductDetail } from '../../redux/productDetail/slice'
 import { useSelector } from '../../redux/hooks'
