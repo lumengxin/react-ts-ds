@@ -1,0 +1,46 @@
+{
+	"id": "ffdifier32944fnerif4548fdd",
+	"useId": "ffdifier32944fnerif4548fdd2321s",
+	"shoppingCartItems": [
+		{
+			"id": 23,
+			"touristRouteId": "iowejridffijasdo2324",
+			"touristRoute": {
+				"id": "ffdifier32944fnerif",
+				"title": "布鲁塞尔一日游",
+				"description": "签证消费无押金",
+				"price": 1233,
+				"originalPrice": 3234,
+				"coupons": "aaaa",
+				"points": "bbb",
+				"rating": 4.5,
+				"touristRoutePictures": [
+					{ "id": 1, "url": "https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" },
+					{ "id": 2, "url": "https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" }
+				],
+				"features": "<div><h2>features</h2></div>",
+				"discountPresent": 0.8
+			}
+		},
+		{
+			"id": 25,
+			"touristRouteId": "iowejrid43543ffijasdo2324",
+			"touristRoute": {
+				"id": "ffdifier329432434544fnerif",
+				"title": "布鲁塞尔一日游df",
+				"description": "签证消费无押金",
+				"price": 1233,
+				"originalPrice": 3234,
+				"coupons": "aaaa",
+				"points": "bbb",
+				"rating": 3.5,
+				"touristRoutePictures": [
+					{ "id": 1, "url": "https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" },
+					{ "id": 2, "url": "https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" }
+				],
+				"features": "<div><h2>features</h2></div>",
+				"discountPresent": 0.8
+			}
+		}
+	]
+}

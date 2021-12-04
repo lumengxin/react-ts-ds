@@ -38,12 +38,12 @@ module.exports = {
 	}),
 	// 选择器提示信息
 	messages: {
-		type: '请选择【修改的性质】:',
-		scope: '请选择【修改的范围】:',
+		type: '请选择 [修改的性质]:',
+		scope: '请选择 [修改的范围]:',
 		// 选择 scope: custom 时会出下面的提示
 		customScope: '请输入自定义的 scope:',
-		subject: '请输入简明的【修改的描述】:', // 主题，简短描述。一行
-		confirmCommit: '确认提交吗？'
+		subject: '请输入简明的 [修改的描述]:', // 主题，简短描述。一行
+		confirmCommit: '确认提交吗?'
 	},
 	allowCustomScopes: false,
 	allowBreakingChanges: [],
