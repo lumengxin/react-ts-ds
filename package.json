@@ -40,7 +40,8 @@
 		"lint:script": "eslint . --ext .js,.jsx,.ts,.tsx",
 		"lint-fix:script": "npm run lint:script -- --fix",
 		"commit": "git-cz",
-		"release": "standard-version"
+		"release": "standard-version",
+		"release:test": "npm run release -- --prerelease alpha"
 	},
 	"eslintConfig": {
 		"extends": [
