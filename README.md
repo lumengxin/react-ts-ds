@@ -132,4 +132,24 @@ module.exports = {
 
 #### 其他
 
-- emji: https://gitmoji.dev/
+##### emoji 使用
+
+github 支持[gitmoji](https://gitmoji.dev/)
+
+1. .cz-config.js 中 value 加图标编码
+
+   > { value: ':construction_worker: build', name: '👷build: 构建工具或外部依赖包的修改' },
+
+2. emoji 开头的 commit 规范信息，commitlint 并没有内置合适的共享配置，这种需要自己写一个符合的配置
+
+> yarn add -D commitlint-config-gitmoji
+
+报错：`Failed to fetch gitmoji JSON,...`。 下载 [gitmoji.json](https://raw.githubusercontent.com/carloscuesta/gitmoji/master/src/data/gitmojis.json) 到 node_modules/commitlint-plugin-gitmoji/lib
+
+3. 修改.commitlintrc.js
+
+```
+module.exports = {
+	extends: ['gitmoji']
+}
+```
