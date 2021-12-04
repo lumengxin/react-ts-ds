@@ -1,6 +1,6 @@
 {
 	"name": "react-ts-ds",
-	"version": "0.1.4-alpha.0",
+	"version": "0.1.4-alpha.1",
 	"private": true,
 	"dependencies": {
 		"@ant-design/icons": "^4.7.0",
