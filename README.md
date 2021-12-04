@@ -46,7 +46,7 @@
 
 ## 规范化
 
-[如何配置 Git Commit Message](https://zhuanlan.zhihu.com/p/69635847)
+[对现有 React 项目进行规范及优化]https://juejin.cn/post/6987685788410445855) [如何配置 Git Commit Message](https://zhuanlan.zhihu.com/p/69635847)
 
 #### 编辑器规范
 
