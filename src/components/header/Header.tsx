@@ -5,10 +5,7 @@ import { Layout, Typography, Input, Menu, Button, Dropdown } from 'antd'
 import { GlobalOutlined } from '@ant-design/icons'
 import { useSelector } from '../../redux/hooks'
 import { useDispatch } from 'react-redux'
-// import { Dispatch } from 'redux'
-// import {RootState} from '../../redux/store'
 import {
-	LanguageActionTypes,
 	addLanguageActionCreator,
 	changeLanguageActionCreator
 } from '../../redux/language/languageActions'
