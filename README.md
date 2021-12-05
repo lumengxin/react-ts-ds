@@ -153,3 +153,81 @@ module.exports = {
 	extends: ['gitmoji']
 }
 ```
+
+## Docker
+
+- 开源的容器化虚拟技术
+- 可移植，脱离硬件
+- 非常轻量级
+- 直接运行在宿主机内核上
+
+### 三个核心概念
+
+- Registry 镜像仓库：Docker Hub https://hub.docker.com
+- Image 镜像：拉取镜像 docker pull node
+- Container 容器：容器启动 docker run
+
+### 容器化方案与 Docker 配置
+
+#### 本地
+
+1. 安装 Docker (windows +10 专业版)
+
+- 开启虚拟化服务：win - 应用与程序（搜索 Hyper） - 启用或关闭 windows 功能 - 勾选 Hyper-V
+- docker.com 官网下载指定版本
+- 命令行验证：docker --version
+
+2. 搭建容器化服务器
+
+- docker pull centos:latest // 拉取最新 centos 镜像至本地硬盘
+- docker images // 查看镜像
+- docker run -p 9000:80 --name web -i -t centos /bin/bash // 开启服务
+- .. // 安装 nginx
+
+**构建定制内容 Docker 镜像（或者直接下载 Nginx Docker 镜像）**
+
+1. 两种方式构建 Docker 镜像
+
+- docker commit
+- docker build + Dockerfile(推荐)
+
+2. 项目根目录创建 Dockerfile 文件（构建 docker 镜像脚本）
+
+```Dockerfile
+# 第一个阶段：拉取node镜像来打包react项目
+FROM node:14 as build
+WORKDIR /app
+COPY packega*.json ./
+RUN npm install
+COPY public public/
+COPY src src/
+RUN npm run build
+
+# 第二个阶段：创建并运行nginx服务器，打包好的文件复制到服务器中
+FROM nginx:alpine
+COPY --from=build /app/build /usr/share/nginx/html
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]
+```
+
+3. 构建镜像：docker build -t react-ts-ds .
+
+4. 部署：docker run -d -p 12231:80 react-ts-ds // docker ps 查看
+
+5. 访问：localhost:12231
+
+#### 阿里云
+
+- 容器镜像服务（ACR): 私人的 docker 镜像仓库
+- 阿里云 ECS 服务器：linux 操作系统，安装和运行 docker 服务
+
+1. 容器化部署方案：
+
+- 容器服务 ACS
+- kunernetes、RANCHER、HELM
+- Jenkins + Spinnaker
+
+2. 容器化部署：ECS 服务器 - 镜像仓库 - 本地构建
+
+- 流程：阿里云 - 控制台 - 云服务器 ECS - 创建实例 - 远程连接
+- 创建 docker：

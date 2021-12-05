@@ -15,7 +15,7 @@ export const RegisterForm = () => {
 	const history = useHistory()
 
 	const onFinish = async (values: any) => {
-		console.log('🚀 ~ file: RegisterForm.tsx ~ line 18 ~ onFinish ~ values', values)
+		// console.log('🚀 ~ file: RegisterForm.tsx ~ line 18 ~ onFinish ~ values', values)
 		try {
 			await axios.post('http://123.56.149.216:8080/auth/register', {
 				email: values.username,
