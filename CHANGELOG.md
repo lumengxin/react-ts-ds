@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.1.6-alpha.0](https://github.com/lumengxin/react-ts-ds/compare/v0.1.5...v0.1.6-alpha.0) (2021-12-05)
+
+### 👷 Build System
+
+- **config**: docker 部署文档 ([d833429](https://github.com/lumengxin/react-ts-ds/commit/d833429))
+
+### 🔧 Continuous Integration
+
+- **config**: craco 配置覆盖 ([ecefd8f](https://github.com/lumengxin/react-ts-ds/commit/ecefd8f))
+
 ## [0.1.5](https://github.com/lumengxin/react-ts-ds/compare/v0.1.4...v0.1.5) (2021-12-04)
 
 ### 🐛 Bug Fixes
