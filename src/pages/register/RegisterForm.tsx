@@ -30,7 +30,7 @@ export const RegisterForm = () => {
 	}
 
 	const onFinishFailed = (errorInfo: any) => {
-		console.log('Failed:', errorInfo)
+		// console.log('Failed:', errorInfo)
 	}
 
 	return (

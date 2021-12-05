@@ -29,7 +29,7 @@ export const signIn = createAsyncThunk(
 			})
 			return data.token
 		} catch (error) {
-			console.log('🚀 ~ file: slice.ts ~ line 32 ~ error', error)
+			// console.log('🚀 ~ file: slice.ts ~ line 32 ~ error', error)
 		}
 	}
 )

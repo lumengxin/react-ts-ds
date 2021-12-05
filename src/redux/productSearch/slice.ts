@@ -31,7 +31,6 @@ export const searchProduct = createAsyncThunk(
 		// }
 
 		const response = await axios.get('/search.json')
-		console.log('🚀 ~ file: slice.ts ~ line 34 ~ response', response)
 		return {
 			data: response.data,
 			// pagination: JSON.parse(response.headers['x-pagination'])
